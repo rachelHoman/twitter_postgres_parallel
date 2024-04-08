@@ -269,7 +269,7 @@ Once you remove these constraints, this will cause downstream errors in both the
 Once you have verified the correctness of your parallel code,
 bring up a fresh instances of your containers and measure your code's runtime with the command
 ```
-$ sh load_tweets_parallel.sh
+$ ./load_tweets_parallel.sh
 ```
 Record the elapsed times in the table below.
 You should notice that parallelism achieves a nearly (but not quite) 10x speedup in each case.
@@ -280,9 +280,9 @@ Ensure that your runtimes on the lambda server are recorded below.
 
 |                        | elapsed time (sequential) | elapsed time (parallel)   |
 | -----------------------| ------------------------- | ------------------------- |
-| `pg_normalized`        |                           |                           | 
-| `pg_normalized_batch`  |                           |                           | 
-| `pg_denormalized`      |                           |                           | 
+| `pg_normalized`        |       460.001342447s      |           56.90s          | 
+| `pg_normalized_batch`  |       174.823742198s      |           17.86s          | 
+| `pg_denormalized`      |           25.12s          |           3.81s           | 
 
 Then upload a link to your forked github repo on sakai.
 
